@@ -1,0 +1,198 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.pyo
+*.pyd
+*.sql
+*.db
+*.sqlite3
+*.py[cod]
+*$py.class
+
+# Local Django settings
+/local_settings.py
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.mo
+*.swp
+db.sqlite3
+media
+/staticfiles
+/static
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Logs
+logs
+*.log
+*.tlog
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React / Next.js
+.next/
+out/
+build/
+dist/
+
+# Coverage directory used by tools like istanbul
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# React Native
+.expo/
+*.expo
+
+# Miscellaneous
+.DS_Store
+*.pem
+*.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# macOS
+*.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# Yarn v2
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Pnpm
+.pnpm-store/
+
+# Parcel-bundler
+.cache/
+.parcel-cache/
+
+# dotenv
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Svelte
+.svelte-kit/
+
+# Compiled binary addons (https://github.com/nodejs/node-gyp)
+build/Release
+
+# Serverless directories
+.serverless/
+.webpack/
+
+# Custom
+custom_dir/
+
+# Python
+*.py[cod]
+*.pyo
+__pycache__/
+*.so
+*.venv
+.mypy_cache/
+.pytest_cache/
+.python-version
+__pypackages__/
+
+# Django
+*.log
+*.pot
+*.py[cod]
+__pycache__/
+db.sqlite3
+media
+*.py[cod]
+*.py[cod]
+*.py[cod]
+*.py[cod]
+*.py[cod]
+*.py[cod]
+*.py[cod]
+*.py[cod]
+*.py[cod]
+
+# Flask
+instance/
+.webassets-cache
+.mypy_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# poetry
+poetry.lock
+
+# Pipenv
+Pipfile.lock
+
+# pyenv
+.python-version
+.pdm.toml
+__pypackages__/
+
+# celery
+celerybeat-schedule
+
+# Django stuff:
+*.pot
+*.mo
+*.swp
+media
+
+# pydantic
+Pydantic/__pydantic__
