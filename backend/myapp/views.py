@@ -1,6 +1,6 @@
 from django.http import JsonResponse
-from rest_framework.parsers import JSONParser
-from rest_framework.decorators import api_view
+from rest_framework.parsers import JSONParser # type: ignore
+from rest_framework.decorators import api_view # type: ignore
 from .serializers import UserSerializer
 from .models import User
 
