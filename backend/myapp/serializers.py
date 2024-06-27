@@ -1,30 +1,31 @@
-from rest_framework import serializers # type: ignore
+# serializers.py
+from rest_framework import serializers
 from .models import User
-from django.contrib.auth.hashers import make_password
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = '__all__'
-        extra_kwargs = {'Password': {'write_only': True}}  # Ensure password is write-only
-
-    def validate_Email(self, value):
-        if "@" not in value or "." not in value:
-            raise serializers.ValidationError("Email is not proper")
-        return value
-
-    def validate_Password(self, value):
-        if len(value) < 6:
-            raise serializers.ValidationError("Password must be at least 6 characters long")
-        return value
+        fields = ['id', 'first_name', 'last_name', 'email', 'password']
+        extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
-        # Encrypt the password before saving
-        validated_data['Password'] = make_password(validated_data['Password'])
-        return super(UserSerializer, self).create(validated_data)
+        user = User.objects.create(
+            email=validated_data['email'],
+            first_name=validated_data['first_name'],
+            last_name=validated_data['last_name']
+        )
+        user.set_password(validated_data['password'])
+        user.save()
+        return user
 
     def update(self, instance, validated_data):
-        # Encrypt the password if it's being updated
-        if 'Password' in validated_data:
-            validated_data['Password'] = make_password(validated_data['Password'])
-        return super(UserSerializer, self).update(instance, validated_data)
+        instance.email = validated_data.get('email', instance.email)
+        instance.first_name = validated_data.get('first_name', instance.first_name)
+        instance.last_name = validated_data.get('last_name', instance.last_name)
+        if 'password' in validated_data:
+            instance.set_password(validated_data['password'])
+        instance.save()
+        return instance
+
+ 
+    
